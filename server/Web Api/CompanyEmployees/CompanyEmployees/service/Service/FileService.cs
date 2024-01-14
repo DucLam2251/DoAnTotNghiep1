@@ -1,6 +1,8 @@
 ﻿using Common.Common.ActionResponse;
 using CompanyEmployees.Common.Common.Respone;
 using CompanyEmployees.service.Interface;
+using Microsoft.AspNetCore.Hosting.Server;
+using Microsoft.AspNetCore.Http;
 
 namespace CompanyEmployees.service.Service
 {
@@ -10,7 +12,7 @@ namespace CompanyEmployees.service.Service
         public async Task<ActionResponse<string>> UploadFile(IFormFile file)
         {
             ActionResponse<string> res = new();
-            var string1 = "http://157.245.60.100:5000/FileStorage/";
+            var string1 = "http://localhost:5000/FileStorage/";
             try
             {
                 var url = string.Empty;
@@ -19,11 +21,11 @@ namespace CompanyEmployees.service.Service
                 if (file.Length > 0)
                 {
                     fileName = Guid.NewGuid().ToString() + "." + file.FileName.Split('.').Last();
-                    var filePath = @"./FileStorage";
+                    var filePath = @".\FileStorage";
                     bool exists = Directory.Exists(filePath);
                     if (!exists)
                         Directory.CreateDirectory(filePath);
-                    filePath = Path.Combine(@"./FileStorage", fileName);
+                    filePath = Path.Combine(@".\FileStorage", fileName);
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
                         await file.CopyToAsync(stream);

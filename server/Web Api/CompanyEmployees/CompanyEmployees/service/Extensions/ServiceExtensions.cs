@@ -17,7 +17,9 @@ namespace CompanyEmployees.service.Extensions
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy", builder =>
-                    builder.WithOrigins("http://157.245.60.100").AllowAnyHeader().AllowAnyMethod().AllowCredentials());
+                    builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
             });
 
         public static void ConfigureIISIntegration(this IServiceCollection services) =>
