@@ -1,0 +1,38 @@
+.w-chart {
+  padding: 24px;
+  box-sizing: border-box;
+  .chart {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .title-chart {
+      font-weight: bold;
+      font-size: 18px;
+      // gap: 32px;
+      color: #222222;
+    }
+    .filter-chart {
+      display: flex;
+      gap: 24px;
+      padding-left: 64px;
+      .dropdown-chart {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+    }
+  }
+  .chart-datn {
+    width: 100% !important;
+    height: 300px;
+    margin-top: 20px;
+  }
+}
+
+.recharts-tooltip-cursor {
+  fill: none;
+}
+
+.recharts-tooltip-cursor {
+  fill: rgba(239, 239, 239, 0);
+}

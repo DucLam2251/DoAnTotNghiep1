@@ -1,0 +1,20 @@
+.ant-input-number {
+  width: 100%;
+}
+
+.dropdown-department {
+  display: flex;
+  align-items: center;
+  margin: 12px;
+
+  p {
+    margin-right: 8px;
+    font-size: 14px;
+    font-style: italic;
+  }
+}
+
+.table-with-filter {
+  height: calc(100% - 56px);
+  box-shadow: none;
+}

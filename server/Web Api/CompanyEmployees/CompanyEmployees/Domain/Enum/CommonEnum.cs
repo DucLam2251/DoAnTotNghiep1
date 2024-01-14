@@ -1,0 +1,4 @@
+﻿namespace CompanyEmployees.Domain.Enum
+{
+
+}

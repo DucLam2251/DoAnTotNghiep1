@@ -1,0 +1,36 @@
+.appointment-detail {
+  padding: 20px;
+  overflow: auto;
+  position: relative;
+
+  .update-btn {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+  }
+
+  .appointment-detail-complete-btn {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+}
+
+.add-btn-appointment-detail {
+  position: absolute;
+  top: -3px;
+  left: 166px;
+}
+
+.table-no-shadow {
+  box-shadow: none;
+}
+
+.link-text{
+  color: #1677ff ;
+  text-decoration: underline;
+  text-underline-position: under;
+  &:hover {
+    cursor: pointer;
+  }
+}

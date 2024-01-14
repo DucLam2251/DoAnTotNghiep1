@@ -1,0 +1,9 @@
+version: '3'
+services:
+  frontend:
+    image: fe
+    restart: always
+    container_name: fe
+    ports:
+      - '80:80'
+      - '443:443'

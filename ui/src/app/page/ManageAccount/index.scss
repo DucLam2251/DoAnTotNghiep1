@@ -1,0 +1,24 @@
+.ant-drawer-body {
+  height: 100%;
+}
+#doctor-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.detail-account-wrapper {
+  padding: 40px;
+}
+
+.ant-table-cell {
+  .name-column {
+    color: #1677ff;
+    text-decoration: underline;
+    text-underline-position: under;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

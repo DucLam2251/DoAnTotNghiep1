@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  be:
+    image: be
+    container_name: be
+    ports:
+      - "5000:80"
+    restart: always
