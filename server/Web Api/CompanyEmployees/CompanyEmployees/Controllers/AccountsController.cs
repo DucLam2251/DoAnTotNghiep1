@@ -56,7 +56,7 @@ namespace CompanyEmployees.Controllers
             }
 
 
-            await _userManager.AddToRoleAsync(user, RoleEnum.Patient.ToString());
+            await _userManager.AddToRoleAsync(user, RoleEnum.Administrator.ToString());
             var userLogin = await _userManager.FindByNameAsync(user.Email);
             var signingCredentials = _jwtHandler.GetSigningCredentials();
             var claims = await _jwtHandler.GetClaims(userLogin);
@@ -96,7 +96,7 @@ namespace CompanyEmployees.Controllers
 
             string role = claim.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
             string email = claim.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
-
+            
             var res = new RoleAndEmailAccountDTO()
             {
                 Email = email,

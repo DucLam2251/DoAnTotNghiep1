@@ -143,10 +143,10 @@ const BasicInfoForm = (props: IBasicInfoProps) => {
 
   const onFinish = (values: any) => {
     const addressArr: string[] = [];
-      if(values.address) addressArr.push(values.address?.trim());
-      if(values.commune.label) addressArr.push(values.commune.label?.trim());
-      if(values.district.label) addressArr.push(values.district.label?.trim());
-      if(values.city.label) addressArr.push(values.city.label?.trim());
+      // if(values.address) addressArr.push(values.address?.trim());
+      // if(values.commune.label) addressArr.push(values.commune.label?.trim());
+      // if(values.district.label) addressArr.push(values.district.label?.trim());
+      // if(values.city.label) addressArr.push(values.city.label?.trim());
     dispatch(openLoading());
     const body = {
       "firstName": "",
@@ -171,10 +171,10 @@ const BasicInfoForm = (props: IBasicInfoProps) => {
             ...body,
             fullName: body.lastName,
             dateOfBirth: values.dateOfBirth.format("DD/MM/YYYY"),
-            city: values.city.label,
-            district: values.district.label,
-            commune: values.commune.label,
-            address: values.address,
+            // city: values.city.label,
+            // district: values.district.label,
+            // commune: values.commune.label,
+            // address: values.address,
           })
         );
         dismissForm();
@@ -292,7 +292,7 @@ const BasicInfoForm = (props: IBasicInfoProps) => {
             <Form.Item<FieldType>
               label="Tỉnh/Thành phố"
               name="city"
-              rules={[{ required: true, message: "Hãy chọn Tỉnh/Thành phố!" }]}
+              rules={[{ required: false, message: "Hãy chọn Tỉnh/Thành phố!" }]}
             >
               <Select
                 labelInValue
@@ -322,7 +322,7 @@ const BasicInfoForm = (props: IBasicInfoProps) => {
             <Form.Item<FieldType>
               label="Quận/Huyện"
               name="district"
-              rules={[{ required: true, message: "Hãy chọn Quận/Huyện!" }]}
+              rules={[{ required: false, message: "Hãy chọn Quận/Huyện!" }]}
             >
               <Select
                 labelInValue
@@ -353,7 +353,7 @@ const BasicInfoForm = (props: IBasicInfoProps) => {
             <Form.Item<FieldType>
               label="Phường/Xã"
               name="commune"
-              rules={[{ required: true, message: "Hãy chọn Phường/Xã!" }]}
+              rules={[{ required: false, message: "Hãy chọn Phường/Xã!" }]}
             >
               <Select
                 labelInValue
